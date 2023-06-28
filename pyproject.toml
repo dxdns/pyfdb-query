@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "pyfdb-query"
+version = "0.1.0"
+description = ""
+authors = ["dxdns <dxdns@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "pyfdb_query"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fdb = "^2.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
