@@ -22,7 +22,7 @@ def dxfdb(func: Callable[[Any, tuple, dict[str, Any]], str]):
                     # data = {d[columns[0]]: d for d in data}
                     data = data[0]
                 
-                return json.dumps(data, indent=4, cls=Encoder)
+                return json.loads(json.dumps(data, indent=4, cls=Encoder))
             
             elif "returning" in query:
                 self.connect.commit()

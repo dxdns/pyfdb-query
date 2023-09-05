@@ -7,6 +7,10 @@ class Crud(Handle):
         self.connect = connect
     
     @dxfdb
+    def fetch(self, query: str) -> str:
+        return query
+        
+    @dxfdb
     def all(self) -> str:
         return self.select()
 
