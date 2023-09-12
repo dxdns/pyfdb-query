@@ -18,7 +18,7 @@ def dxfdb(func: Callable[[Any, tuple, dict[str, Any]], str]):
                 columns = [column[0].lower() for column in cursor.description]
                 data = [dict(zip(columns, row)) for row in result]
                 
-                if func.__name__ not in ["all"]:
+                if func.__name__ not in ["all", "fetch"]:
                     # data = {d[columns[0]]: d for d in data}
                     data = data[0]
                 
